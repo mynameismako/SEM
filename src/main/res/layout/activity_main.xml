@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginBottom="20dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="Created by Head Mechanic Eriek Pawirodinomo"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="Regels:"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:text="- Als er niet werd gewerkt in het weekend, moet je het veld gewoon met 0 (NUL) invullen."/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:text="- Als er geen overuur werd gewerkt bij gewone werkdagen (door de week), moet je het veld gewoon met 0 (NUL) invullen."/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:text="- Als je geen Zwamp Toelagen ontvangt, moet je 0 (NUL) invullen." />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:text="- Als je Zwamp Toelagen ontvangt, moet je 7.5 invullen." />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:text="- Als je het invoeg veld leeg laat, dan crashed de applicatie per direct" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:text="- Laat Gio niet weten dat dit app werd gebouwd om de salarissen te berekenen" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:text="- Copyright © FreelanceMedia 2019. All Rights Reserved" />
+
+        <EditText
+            android:id="@+id/uurLoon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Uurloon"
+            android:inputType="numberDecimal"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/aantalDagen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Aantal dagen"
+            android:inputType="numberDecimal"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/weekOverUren"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Normale overuren (150%)"
+            android:inputType="numberDecimal"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/zaterdagUren"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Zaterdag uren (150%)"
+            android:inputType="numberDecimal"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/zaterdagOverUren"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Zaterdag overuren (200%)"
+            android:inputType="numberDecimal"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/zondagUren"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Zondag uren (300%)"
+            android:inputType="numberDecimal"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/zwampToelagen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:inputType="numberDecimal"
+            android:hint="7.5%" />
+
+        <Button
+            android:id="@+id/btnResultaat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Resultaat"
+            android:textSize="20sp" />
+
+
+        <TextView
+            android:id="@+id/bord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/normaleLoon1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/weekOverUren1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/zaterdagUren1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/zaterdagOverUren1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/zondagUren1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/brutoSaldo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/zwampToelagen1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/subTotaal1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/New"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nieuwe Berekening"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+</ScrollView>
